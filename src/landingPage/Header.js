@@ -3,9 +3,12 @@ import styled from "styled-components";
 import logo from "../assets/imgs/traviea-logo.png";
 
 const Div = styled.div`
+  margin: auto;
+  width: 90vw;
+
   header {
     display: flex;
-    margin: 1.5em;
+    margin: 1.5em 0;
     justify-content: space-between;
     align-items: center;
     font-family: Poppins, sans-serif;
@@ -178,8 +181,6 @@ const Div = styled.div`
   }
 
   @media screen and (min-width: 900px) {
-    margin: 0 2em;
-
     #navigation {
       width: 25em;
     }
@@ -190,8 +191,7 @@ const Div = styled.div`
     }
   }
 
-  @media screen and (min-width: 1200px) {
-    margin: auto;
+  @media screen and (min-width: 1300px) {
     width: 1200px;
   }
 `;
