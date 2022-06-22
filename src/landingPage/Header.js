@@ -1,17 +1,23 @@
 import React from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import logo from "../assets/imgs/traviea-logo.png";
 
 const Div = styled.div`
-  margin: auto;
-  width: 90vw;
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(255,255,255,0.95);
+  z-index: 999;
 
   header {
     display: flex;
-    margin: 1.5em 0;
+    margin: 1.5em auto;
     justify-content: space-between;
     align-items: center;
     font-family: Poppins, sans-serif;
+    width: 90vw;
 
     .logo {
       width: 6em;
@@ -33,7 +39,7 @@ const Div = styled.div`
         padding: 0;
         margin-top: 6em;
 
-        li a {
+        li {
           text-decoration: none;
           font-size: 0.9rem;
           color: white;
@@ -155,10 +161,6 @@ const Div = styled.div`
           align-items: center;
 
           li {
-            display: inline;
-          }
-
-          li a {
             color: black;
             display: inline;
             padding: 0;
@@ -192,7 +194,9 @@ const Div = styled.div`
   }
 
   @media screen and (min-width: 1300px) {
-    width: 1200px;
+    header {
+      width: 1200px;
+    }
   }
 `;
 
@@ -201,8 +205,10 @@ const showMenu = () => {
   navMenu.style.transform = "translateX(0%)";
 };
 const hideMenu = () => {
-  const navMenu = document.getElementById("navigation");
-  navMenu.style.transform = "translateX(100%)";
+  if (window.innerWidth < 700) {
+    const navMenu = document.getElementById("navigation");
+    navMenu.style.transform = "translateX(100%)";
+  }
 };
 
 const Header = () => {
@@ -226,19 +232,44 @@ const Header = () => {
           </svg>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="home" smooth={true} duration={1000} onClick={hideMenu}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="about" smooth={true} duration={1000} onClick={hideMenu}>
+                About
+              </Link>
             </li>
             <li>
-              <a href="#">Service</a>
+              <Link
+                to="service"
+                smooth={true}
+                duration={1000}
+                onClick={hideMenu}
+              >
+                Service
+              </Link>
             </li>
             <li>
-              <a href="#">Safety</a>
+              <Link
+                to="safety"
+                smooth={true}
+                duration={1000}
+                onClick={hideMenu}
+              >
+                Safety
+              </Link>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <Link
+                to="careers"
+                smooth={true}
+                duration={1000}
+                onClick={hideMenu}
+              >
+                Careers
+              </Link>
             </li>
           </ul>
         </nav>

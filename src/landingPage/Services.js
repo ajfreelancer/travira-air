@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import serviceImage from '../assets/imgs/service-image.jpg'
+import serviceImage from "../assets/imgs/service-image.jpg";
 
 const Div = styled.div`
   background-color: #0e1035;
@@ -15,91 +15,91 @@ const Div = styled.div`
     grid-gap: 7em;
   }
 
-  .content{
+  .content {
     margin-bottom: 5em;
   }
 
-  .image{
+  .image {
     background-image: url(${serviceImage});
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 1.5em;
   }
 
-  h2{
+  h2 {
     font-size: 2.6rem;
     font-weight: 600;
-    margin: 0 0 .5em 0;
-  }
-  
-  .blue{
-    color: #2F80ED;
+    margin: 0 0 0.5em 0;
   }
 
-  p{
+  .blue {
+    color: #2f80ed;
+  }
+
+  p {
     font-size: 1rem;
     line-height: 1.7em;
     margin-bottom: 1.4em;
     width: 73%;
-    color: #BDBBBB;
+    color: #bdbbbb;
   }
 
-  .lists{
+  .lists {
     display: flex;
     justify-content: space-between;
     width: 500px;
   }
 
-  ul{
+  ul {
     margin: 0;
     padding: 0;
   }
 
-  .service-item{
+  .service-item {
     font-weight: 500;
     font-size: 1rem;
     list-style: none;
     margin: 1em 0;
   }
 
-  @media (max-width: 1366px){
-  	.container{
-        width: 90%;
+  @media (max-width: 1366px) {
+    .container {
+      width: 90%;
     }
   }
 
-  @media (max-width: 1199.98px){
-  	.container{
-        grid-gap: 4em;
+  @media (max-width: 1199.98px) {
+    .container {
+      grid-gap: 4em;
     }
   }
 
-  @media (max-width: 1000px){
-  	.container{
-        grid-template-columns: 1fr;
-        grid-gap: 2.5em;
-        text-align: center;
+  @media (max-width: 1000px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-gap: 2.5em;
+      text-align: center;
     }
-    .image{
-        height: 500px;
+    .image {
+      height: 500px;
     }
-    h2{
-        margin-bottom: 0;
+    h2 {
+      margin-bottom: 0;
     }
-    p{
-        width: 80%;
-        margin: .8em auto;
+    p {
+      width: 80%;
+      margin: 0.8em auto;
     }
-    .lists{
-        flex-direction: column;
-        width: fit-content;
-        margin: auto;
+    .lists {
+      flex-direction: column;
+      width: fit-content;
+      margin: auto;
     }
   }
 
-  @media (max-width: 500px){
-  	p{
-        width: 90%;
+  @media (max-width: 500px) {
+    p {
+      width: 90%;
     }
   }
 `;
@@ -107,7 +107,7 @@ const Div = styled.div`
 const Services = () => {
   return (
     <section>
-      <Div>
+      <Div id="service">
         <div className="container">
           <div className="image"></div>
           <div className="content">

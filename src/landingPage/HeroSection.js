@@ -1,4 +1,5 @@
 import React from "react";
+import { Element } from "react-scroll";
 import styled from "styled-components";
 import heroBackground from "../assets/imgs/Hero-Section.jpg";
 
@@ -8,7 +9,8 @@ const Div = styled.div`
   justify-content: center;
   height: 800px;
   width: 1200px;
-  margin: auto;
+  margin: 0 auto 102px;
+  top: 102px;
 
   .background {
     position: absolute;
@@ -91,10 +93,10 @@ const Div = styled.div`
   }
 
   @media (max-width: 1000px) {
-    margin-top: -50px;
     display: flex;
     flex-direction: column;
     height: fit-content;
+    top: 40px;
 
     .background {
       position: relative;
@@ -144,7 +146,7 @@ const Div = styled.div`
 const HeroSection = () => {
   return (
     <section>
-      <Div>
+      <Div id="home">
         <div className="background"></div>
         <div className="container">
           <div className="content">
