@@ -95,7 +95,6 @@ const Div = styled.div`
     display: flex;
     flex-direction: column;
     height: fit-content;
-    
 
     .background {
       position: relative;
@@ -106,67 +105,63 @@ const Div = styled.div`
       margin: auto;
     }
 
-    .container{
-        width: 80%;
-        margin: auto;
+    .container {
+      width: 80%;
+      margin: auto;
     }
 
-    .content{
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: auto;
-        margin-top: -50px;
-        width: 80%;
+    .content {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      margin-top: -50px;
+      width: 80%;
     }
 
-    .hero-paragraph{
-        width: 100%;
+    .hero-paragraph {
+      width: 100%;
     }
 
-    h1{
-        font-size: 2.5rem;
+    h1 {
+      font-size: 2.5rem;
     }
   }
 
   @media (max-width: 525px) {
-    .content{
-        width: 91%;
+    .content {
+      width: 95%;
     }
-    h1 {
-        font-size: 1.4rem;
-    }
-    .hero-paragraph {
-        font-size: 0.85rem;
-    }
-    .background{
-        width: 250px;
-        height: 300px;
-        margin-top: 10px;
-        margin-bottom: 30px;
+    .background {
+      width: 350px;
+      height: 400px;
+      margin-top: 10px;
+      margin-bottom: 30px;
     }
   }
 `;
 
 const HeroSection = () => {
   return (
-    <Div>
-      <div className="background"></div>
-      <div className="container">
-        <div className="content">
-          <h1 className="hero-heading">
-            <span className="blue">World class</span> charter and maintenance
-            flights
-          </h1>
-          <p className="hero-paragraph">
-            Our goal is simply to offer the highest standards of professionalism
-            and service as measured by our safety record, dispatch reliability
-            and customer satisfaction.
-          </p>
-          <button className="hero-CTA">Booking Now</button>
+    <section>
+      <Div>
+        <div className="background"></div>
+        <div className="container">
+          <div className="content">
+            <h1 className="hero-heading">
+              <span className="blue">World class</span> charter and maintenance
+              flights
+            </h1>
+            <p className="hero-paragraph">
+              Our goal is simply to offer the highest standards of
+              professionalism and service as measured by our safety record,
+              dispatch reliability and customer satisfaction.
+            </p>
+            <button className="hero-CTA">Booking Now</button>
+          </div>
         </div>
-      </div>
-    </Div>
+      </Div>
+    </section>
   );
 };
 
