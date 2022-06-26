@@ -25,7 +25,7 @@ const Div = styled.div`
 
     nav {
       position: fixed;
-      background-color: #2f80ed;
+      background-color: #0E1035;
       top: 0;
       right: 0;
       height: 100vh;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Element } from "react-scroll";
 import styled from "styled-components";
 import heroBackground from "../assets/imgs/Hero-Section.jpg";
 
@@ -37,7 +36,7 @@ const Div = styled.div`
   h1 {
     font-size: 3.9rem;
     font-weight: 800;
-    line-height: 1.15em;
+    line-height: 1.1em;
     letter-spacing: -0.03em;
     margin-bottom: 0.25em;
   }
@@ -49,6 +48,7 @@ const Div = styled.div`
   .hero-paragraph {
     font-size: 1rem;
     line-height: 1.7em;
+    margin-top: 1.2em;
     margin-bottom: 1.5em;
     width: 65%;
     color: #676767;
@@ -103,7 +103,6 @@ const Div = styled.div`
       height: 509px;
       background-size: cover;
       background-repeat: no-repeat;
-      width: 400px;
       margin: auto;
     }
 
@@ -135,7 +134,6 @@ const Div = styled.div`
       width: 95%;
     }
     .background {
-      width: 350px;
       height: 400px;
       margin-top: 10px;
       margin-bottom: 30px;

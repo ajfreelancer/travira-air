@@ -1,8 +1,11 @@
 import "./App.css";
 import Clients from "./landingPage/Clients";
+import Fleet from "./landingPage/Fleet";
 import Header from "./landingPage/Header";
 import HeroSection from "./landingPage/HeroSection";
-import Services from "./landingPage/Services";
+import Safety from "./landingPage/Safety";
+import Services2 from "./landingPage/Services2";
+import Testimonial from "./landingPage/Testimonial";
 
 function App() {
   return (
@@ -10,9 +13,14 @@ function App() {
       <Header />
       <HeroSection />
       <Clients />
-      <Services />
+      <Services2 />
+      <Safety />
+      <Fleet />
+      <Testimonial />
     </div>
+    
   );
 }
 
 export default App;
+
