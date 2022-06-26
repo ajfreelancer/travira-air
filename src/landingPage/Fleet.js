@@ -50,7 +50,6 @@ const Fleet = () => {
 
   useEffect(() => {
     let endPoint = carousel.current.scrollWidth - carousel.current.offsetWidth;
-    console.log(endPoint);
     setWidth(endPoint+40);
   }, []);
 
