@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade, Zoom } from "react-reveal";
 import styled from "styled-components";
 import heroBackground from "../assets/imgs/Hero-Section.jpg";
 
@@ -126,6 +127,7 @@ const Div = styled.div`
 
     h1 {
       font-size: 2.5rem;
+      margin-top: 0.5em;
     }
   }
 
@@ -138,27 +140,41 @@ const Div = styled.div`
       margin-top: 10px;
       margin-bottom: 30px;
     }
+    h1 {
+      font-size: 2rem;
+    }
   }
 `;
 
-const HeroSection = () => {
+const HeroSection = ({ showContactForm }) => {
   return (
     <section>
       <Div id="home">
-        <div className="background"></div>
+        <Zoom>
+          <div className="hidden background th:block"></div>
+        </Zoom>
+        <img
+          className="mx-auto th:hidden sm:w-[60%]"
+          src={require("../assets/imgs/helicop-mobile.png")}
+          alt="helicopter graphic"
+        />
         <div className="container">
-          <div className="content">
-            <h1 className="hero-heading">
-              <span className="blue">World class</span> charter and maintenance
-              flights
-            </h1>
-            <p className="hero-paragraph">
-              Our goal is simply to offer the highest standards of
-              professionalism and service as measured by our safety record,
-              dispatch reliability and customer satisfaction.
-            </p>
-            <button className="hero-CTA">Booking Now</button>
-          </div>
+          <Fade left>
+            <div className="content">
+              <h1 className="hero-heading">
+                <span className="blue">World class</span> charter and
+                maintenance flights
+              </h1>
+              <p className="hero-paragraph">
+                Our goal is simply to offer the highest standards of
+                professionalism and service as measured by our safety record,
+                dispatch reliability and customer satisfaction.
+              </p>
+              <button className="hero-CTA" onClick={showContactForm}>
+                Booking Now
+              </button>
+            </div>
+          </Fade>
         </div>
       </Div>
     </section>

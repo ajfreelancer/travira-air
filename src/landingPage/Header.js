@@ -8,7 +8,7 @@ const Div = styled.div`
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   z-index: 999;
 
   header {
@@ -25,7 +25,7 @@ const Div = styled.div`
 
     nav {
       position: fixed;
-      background-color: #0E1035;
+      background-color: #0e1035;
       top: 0;
       right: 0;
       height: 100vh;
@@ -72,10 +72,10 @@ const Div = styled.div`
     }
 
     .contact-us-button {
-      color: #2f80ed;
+      color: #fff;
+      background-color: #2f80ed;
       font-size: 0.8rem;
       font-weight: 700;
-      border: 1px solid #2f80ed;
       height: fit-content;
       padding: 0.6em 0.8em;
       border-radius: 0.8em;
@@ -87,10 +87,10 @@ const Div = styled.div`
 
       &:active {
         background-color: #fff;
-        color: #131720;
+        color: #0e1035;
       }
       &:hover {
-        background-color: #2f80ed;
+        background-color: #0e1035;
         color: white;
         border: #2f80ed;
       }
@@ -211,12 +211,14 @@ const hideMenu = () => {
   }
 };
 
-const Header = () => {
+const Header = ({ showContactForm }) => {
   return (
     <Div className="wrapper">
       <header>
         <img className="logo" src={logo} alt="" />
-        <span className="contact-us-button">Contact Us</span>
+        <span className="contact-us-button" onClick={showContactForm}>
+          Contact Us
+        </span>
         <nav id="navigation">
           <svg
             className="exitMenuButton"
@@ -234,11 +236,6 @@ const Header = () => {
             <li>
               <Link to="home" smooth={true} duration={1000} onClick={hideMenu}>
                 Home
-              </Link>
-            </li>
-            <li>
-              <Link to="about" smooth={true} duration={1000} onClick={hideMenu}>
-                About
               </Link>
             </li>
             <li>
@@ -262,13 +259,18 @@ const Header = () => {
               </Link>
             </li>
             <li>
+              <Link to="fleet" smooth={true} duration={1000} onClick={hideMenu}>
+                Fleet
+              </Link>
+            </li>
+            <li>
               <Link
-                to="careers"
+                to="testimonials"
                 smooth={true}
                 duration={1000}
                 onClick={hideMenu}
               >
-                Careers
+                Testimonials
               </Link>
             </li>
           </ul>
